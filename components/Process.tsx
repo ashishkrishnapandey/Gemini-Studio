@@ -6,7 +6,7 @@ const Process: React.FC = () => {
   const activeStep = STEPS[currentStep];
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden" id="platform">
+    <section className="py-24 bg-black relative overflow-hidden scroll-mt-20" id="platform">
       {/* Decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-gray/20 to-transparent pointer-events-none"></div>
       
@@ -25,11 +25,11 @@ const Process: React.FC = () => {
                 onClick={() => setCurrentStep(index)} 
                 className={`cursor-pointer p-6 border-l-2 transition-all duration-300 group ${index === currentStep ? 'border-brand-green bg-white/5' : 'border-white/10 hover:border-white/30'}`}
               >
-                <div className="flex items-center justify-between mb-1">
-                  <span className="font-mono text-xs text-gray-500 uppercase">0{step.id}</span>
-                  <span className={`material-symbols-outlined ${index === currentStep ? 'text-brand-green' : 'text-gray-600'}`}>{step.icon}</span>
+                <span className="font-mono text-xs text-gray-500 uppercase block mb-2">0{step.id}</span>
+                <div className="flex items-center justify-between">
+                  <h4 className={`text-xl font-bold ${index === currentStep ? 'text-white' : 'text-gray-400 group-hover:text-gray-300'}`}>{step.title}</h4>
+                  <span className={`material-symbols-outlined ${index === currentStep ? 'text-brand-green' : 'text-gray-600 group-hover:text-gray-300'}`}>{step.icon}</span>
                 </div>
-                <h4 className={`text-xl font-bold ${index === currentStep ? 'text-white' : 'text-gray-400 group-hover:text-gray-300'}`}>{step.title}</h4>
               </div>
             ))}
           </div>
