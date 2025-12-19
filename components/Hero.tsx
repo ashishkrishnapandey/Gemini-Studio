@@ -15,40 +15,61 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 border border-brand-green/30 bg-brand-green/5 rounded-full mb-8 animate-fade-in-up">
-            <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
-            <span className="text-brand-green font-mono text-xs uppercase tracking-widest">End to End Project Developer</span>
+        <div className="max-w-5xl">
+          {/* Badge / Label - Simplified */}
+          <div className="inline-flex items-center gap-3 mb-8 animate-fade-in-up">
+            <div className="h-px w-12 bg-brand-green"></div>
+            <span className="text-brand-green font-mono text-xs uppercase tracking-[0.2em]">End-to-End Project Developer</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8 animate-fade-in-up text-white" style={{ animationDelay: '0.1s' }}>
+          {/* Main Headline - Improved typography and spacing */}
+          <h1 className="text-6xl md:text-8xl font-medium tracking-tight leading-[0.95] mb-10 animate-fade-in-up text-white" style={{ animationDelay: '0.1s' }}>
             Carbon Assets <br />
-            <span className="text-brand-green">Built to Last</span>
+            <span className="text-brand-green font-bold">Built to Last</span>
           </h1>
           
-          <div className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            We originate, finance and steward a diversified portfolio of nature-based solutions and technology-enabled carbon removal projects.
-            <div className="text-white mt-4 font-medium">
-              Building at the nexus of <span className="text-brand-green">Nature</span>, <span className="text-brand-green">Community</span> & <span className="text-brand-green">Capital</span>.
+          {/* Description Grid - Better scanning and hierarchy */}
+          <div className="grid md:grid-cols-[1.5fr_1fr] gap-8 md:gap-16 mb-14 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div>
+              <p className="text-xl text-gray-400 leading-relaxed">
+                We originate, finance, and steward a diversified portfolio of nature-based solutions and technology-enabled carbon removal projects.
+              </p>
+            </div>
+            
+            <div className="flex items-center">
+               <div className="pl-6 border-l border-brand-green/30">
+                  <p className="text-white text-lg font-medium leading-snug">
+                    Building at the nexus of <span className="text-brand-green">Nature</span>, <span className="text-brand-green">Community</span> & <span className="text-brand-green">Capital</span>.
+                  </p>
+               </div>
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a className="px-8 py-4 bg-brand-green text-brand-black font-bold font-mono uppercase tracking-wider hover:bg-white transition-colors flex items-center justify-center gap-2 group" href="#projects">
-              See what we build
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          {/* Actions & Social Proof - Decoupled for clarity */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <a className="group relative px-8 py-4 bg-white text-brand-black font-bold font-mono uppercase tracking-wider overflow-hidden hover:bg-brand-green transition-colors" href="#projects">
+              <span className="relative z-10 flex items-center gap-2">
+                See what we build
+                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </span>
             </a>
             
-            <div className="flex items-center gap-4 px-6 py-4 border-l border-white/10">
-              <div className="text-right">
-                <div className="text-2xl font-bold font-mono text-white">120k+</div>
-                <div className="text-xs text-gray-500 uppercase tracking-widest">tonnes under origination</div>
+            {/* Live Stat Indicator */}
+            <div className="flex items-center gap-3 py-2 px-4 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+              </span>
+              <div className="flex items-baseline gap-2">
+                <span className="text-white font-mono font-bold">120k+</span>
+                <span className="text-xs text-gray-500 uppercase tracking-widest">tonnes originating</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       
+      {/* Scroll Indicator - Reverted to bouncing center */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce text-white">
         <span className="text-[10px] font-mono uppercase tracking-[0.2em]">Scroll</span>
         <span className="material-symbols-outlined text-sm">keyboard_arrow_down</span>

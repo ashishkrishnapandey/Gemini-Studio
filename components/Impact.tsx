@@ -10,20 +10,18 @@ const Impact: React.FC = () => {
   const MAX_INVESTMENT = 1000000;
 
   // Logic factors
-  // Biochar: 1666 tCO2 for 250k => 0.006664 t/$. Revenue 12500 for 250k => 0.05. Share 5%.
-  // Mangrove: 6250 tCO2 for 250k => 0.025 t/$. Revenue 75000 for 250k => 0.3. Share 30%.
+  // Biochar: 1666 tCO2 for 250k => 0.006664 t/$. Revenue 12500 for 250k => 0.05.
+  // Mangrove: 6250 tCO2 for 250k => 0.025 t/$. Revenue 75000 for 250k => 0.3.
   
   const factors = {
     biochar: {
       co2: 0.006664,
       rev: 0.05,
-      share: 5.0,
       disclaimer: "Based on revenue share models for industrial feedstock sourcing."
     },
     mangrove: {
       co2: 0.025,
       rev: 0.3,
-      share: 30.0,
       disclaimer: "Based on revenue share models for community forestry labor."
     }
   };
@@ -38,7 +36,7 @@ const Impact: React.FC = () => {
   return (
     <section className="py-24 bg-black border-b border-white/5" id="impact">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Controls */}
           <div>
@@ -96,38 +94,30 @@ const Impact: React.FC = () => {
           </div>
           
           {/* Result Card */}
-          <div className="bg-brand-gray/50 border border-white/5 p-10 relative overflow-hidden h-full flex flex-col justify-center">
+          <div className="bg-brand-gray/50 border border-white/5 p-10 md:p-14 relative overflow-hidden h-full min-h-[500px] flex flex-col justify-center">
              {/* Watermark */}
-             <div className="absolute top-0 right-0 font-bold text-[120px] leading-none text-white opacity-[0.03] select-none pointer-events-none">
+             <div className="absolute top-0 right-0 font-bold text-[150px] leading-none text-white opacity-[0.02] select-none pointer-events-none">
                 CO2
              </div>
 
-             <div className="relative z-10">
-                <div className="mb-10">
-                    <div className="font-mono text-gray-400 mb-2">Estimated Carbon Removal</div>
-                    <div className="flex items-baseline gap-2">
-                        <span className="text-6xl font-bold text-white tracking-tight">{carbonRemoval.toLocaleString()}</span>
-                        <span className="text-brand-green font-mono text-xl">tCO2e</span>
-                    </div>
-                </div>
-
-                <div className="mb-8 pt-8 border-t border-white/10">
-                    <div className="font-mono text-gray-400 mb-2">Direct Community Revenue</div>
-                    <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-5xl font-bold text-white tracking-tight">${revenue.toLocaleString()}</span>
-                        <span className="text-gray-500 font-mono text-sm">USD</span>
-                    </div>
-                    <p className="text-xs text-gray-600 max-w-xs">*{currentFactor.disclaimer}</p>
-                </div>
-
+             <div className="relative z-10 flex flex-col gap-12">
                 <div>
-                    <div className="flex justify-between text-mono text-gray-500 text-sm mb-2 font-mono">
-                        <span>Community Share</span>
-                        <span>{currentFactor.share.toFixed(1)}%</span>
+                    <div className="font-mono text-gray-400 mb-3 text-sm uppercase tracking-wider">Estimated Carbon Removal</div>
+                    <div className="flex items-baseline gap-3">
+                        <span className="text-6xl md:text-7xl font-bold text-white tracking-tight">{carbonRemoval.toLocaleString()}</span>
+                        <span className="text-brand-green font-mono text-2xl">tCO2e</span>
                     </div>
-                    <div className="w-full bg-white/5 h-3 rounded-full overflow-hidden">
-                        <div className="bg-brand-green h-full" style={{ width: `${currentFactor.share}%` }}></div>
+                </div>
+
+                <div className="pt-10 border-t border-white/10">
+                    <div className="font-mono text-gray-400 mb-3 text-sm uppercase tracking-wider">Direct Community Revenue</div>
+                    <div className="flex items-baseline gap-3 mb-4">
+                        <span className="text-5xl md:text-6xl font-bold text-white tracking-tight">${revenue.toLocaleString()}</span>
+                        <span className="text-gray-500 font-mono text-lg">USD</span>
                     </div>
+                    <p className="text-xs text-gray-500 max-w-sm leading-relaxed border-l-2 border-white/10 pl-3">
+                        *{currentFactor.disclaimer}
+                    </p>
                 </div>
              </div>
           </div>
