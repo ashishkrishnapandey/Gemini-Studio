@@ -7,7 +7,8 @@
     
     <!-- External Dependencies -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <!-- Updated Fonts: Removed Inter, Added full range for Space Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD,ROND@24,400,0,0,50&amp;icon_names=link" rel="stylesheet">
 
@@ -17,7 +18,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Space Grotesk', 'sans-serif'],
                         mono: ['Space Grotesk', 'monospace'],
                     },
                     colors: {
@@ -50,6 +51,7 @@
         body {
             background-color: #0a0a0a;
             color: #f5f5f5;
+            font-family: 'Space Grotesk', sans-serif;
         }
         .glass-panel {
             background: rgba(30, 30, 30, 0.6);

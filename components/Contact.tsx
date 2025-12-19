@@ -108,10 +108,10 @@ const Contact: React.FC = () => {
           <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
             <span className="material-symbols-outlined text-brand-green text-5xl mb-8">mail</span>
             <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
-                Let's build together.
+                Let's build together
             </h3>
             <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-                Capital, offtake, or project partnerships. Let's talk.
+                Capital, offtake or project partnerships. Let's talk.
             </p>
             
             <form 
