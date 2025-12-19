@@ -62,7 +62,7 @@ export const STEPS: Step[] = [
         id: 2,
         title: "Structure",
         subtitle: "Rigorous Due Diligence",
-        desc: "Our legal and financial teams structure projects to ensure land tenure security, community buy-in, and long-term financial viability before a single dollar is deployed.",
+        desc: "Our legal and financial teams structure projects to ensure land tenure security, community buy-in and long-term financial viability before a single dollar is deployed.",
         img: "https://picsum.photos/id/112/1200/800",
         icon: "hub"
     },
@@ -70,7 +70,7 @@ export const STEPS: Step[] = [
         id: 3,
         title: "Deploy",
         subtitle: "Boots on the Ground",
-        desc: "We manage the implementation phase directly or through trusted local partners, overseeing planting, facility construction, and initial operations.",
+        desc: "We manage the implementation phase directly or through trusted local partners, overseeing planting, facility construction and initial operations.",
         img: "https://picsum.photos/id/116/1200/800",
         icon: "construction"
     },
@@ -78,7 +78,7 @@ export const STEPS: Step[] = [
         id: 4,
         title: "Verify",
         subtitle: "MRV Integration",
-        desc: "Continuous Monitoring, Reporting, and Verification (MRV) using IoT sensors and remote sensing to prove carbon removal occurred and persists.",
+        desc: "Continuous Monitoring, Reporting and Verification (MRV) using IoT sensors and remote sensing to prove carbon removal occurred and persists.",
         img: "https://picsum.photos/id/118/1200/800",
         icon: "verified_user"
     },

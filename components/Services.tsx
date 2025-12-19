@@ -21,7 +21,7 @@ const Services: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-2xl font-bold mb-2 text-white">Project Origination</h4>
-                <p className="text-gray-400">Land tenure diligence, ecological feasibility, and technical project design. We find the signal in the noise.</p>
+                <p className="text-gray-400">Land tenure diligence, ecological feasibility and technical project design. We find the signal in the noise.</p>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@ const Services: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-xl font-bold mb-2 text-white">MRV &amp; Integrity</h4>
-                <p className="text-gray-400 text-sm">Baselines, continuous monitoring, and verification coordination.</p>
+                <p className="text-gray-400 text-sm">Baselines, continuous monitoring and verification coordination.</p>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Services: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-xl font-bold mb-2 text-white">Capital Mobilization</h4>
-                <p className="text-gray-400 text-sm">Feasibility finance, blended structures, and forward offtake.</p>
+                <p className="text-gray-400 text-sm">Feasibility finance, blended structures and forward offtake.</p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Services: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-2xl font-bold mb-2 text-white">Community &amp; FPIC</h4>
-                <p className="text-gray-400">Consent processes, benefit-sharing structures, and long-term governance alignment. We don't just consult; we partner.</p>
+                <p className="text-gray-400">Consent processes, benefit-sharing structures and long-term governance alignment. We don't just consult; we partner.</p>
               </div>
             </div>
           </div>

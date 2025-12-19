@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           <div className="grid md:grid-cols-[1.5fr_1fr] gap-8 md:gap-16 mb-14 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div>
               <p className="text-xl text-gray-400 leading-relaxed">
-                We originate, finance, and steward a diversified portfolio of nature-based solutions and technology-enabled carbon removal projects.
+                We originate, finance and steward a diversified portfolio of nature-based solutions and technology-enabled carbon removal projects.
               </p>
             </div>
             
