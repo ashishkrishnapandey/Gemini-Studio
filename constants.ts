@@ -10,7 +10,8 @@ export const PROJECTS: Project[] = [
         removal_annual: "12,000 t/yr",
         permanence: "100y+",
         status: "Active",
-        img: "https://picsum.photos/id/214/800/600" 
+        img: "https://picsum.photos/id/214/800/600",
+        description: "High-permanence biochar production from agricultural residues."
     },
     {
         id: 2,
@@ -20,17 +21,19 @@ export const PROJECTS: Project[] = [
         removal_annual: "500ha",
         permanence: "100y+",
         status: "Active",
-        img: "https://picsum.photos/id/220/800/600"
+        img: "https://picsum.photos/id/220/800/600",
+        description: "Community-led mangrove restoration and protection."
     },
     {
         id: 3,
         name: "Himalayan Native",
-        type: "Bamboo Reforestation",
+        type: "ARR (Reforestation)",
         location: "Nagaland, India",
         removal_annual: "800 ha",
         permanence: "50y+",
         status: "Active",
-        img: "https://picsum.photos/id/231/800/600"
+        img: "https://picsum.photos/id/231/800/600",
+        description: "Native species reforestation on degraded pasture land."
     },
     {
         id: 4,
@@ -40,7 +43,8 @@ export const PROJECTS: Project[] = [
         removal_annual: "N/A",
         permanence: "N/A",
         status: "Feasibility",
-        img: "https://picsum.photos/id/240/800/600"
+        img: "https://picsum.photos/id/240/800/600",
+        description: "We have 5+ projects currently in feasibility or structuring phases across 4 states."
     }
 ];
 

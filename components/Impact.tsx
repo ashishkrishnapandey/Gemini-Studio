@@ -6,6 +6,9 @@ const Impact: React.FC = () => {
   const [investment, setInvestment] = useState<number>(250000);
   const [projectType, setProjectType] = useState<ProjectType>('biochar');
 
+  const MIN_INVESTMENT = 10000;
+  const MAX_INVESTMENT = 1000000;
+
   // Logic factors
   // Biochar: 1666 tCO2 for 250k => 0.006664 t/$. Revenue 12500 for 250k => 0.05. Share 5%.
   // Mangrove: 6250 tCO2 for 250k => 0.025 t/$. Revenue 75000 for 250k => 0.3. Share 30%.
@@ -28,6 +31,9 @@ const Impact: React.FC = () => {
   const currentFactor = factors[projectType];
   const carbonRemoval = Math.round(investment * currentFactor.co2);
   const revenue = Math.round(investment * currentFactor.rev);
+
+  // Calculate percentage for slider background fill
+  const percentage = ((investment - MIN_INVESTMENT) / (MAX_INVESTMENT - MIN_INVESTMENT)) * 100;
 
   return (
     <section className="py-24 bg-black border-b border-white/5" id="impact">
@@ -72,12 +78,15 @@ const Impact: React.FC = () => {
                 </div>
                 <input 
                     type="range" 
-                    min="10000" 
-                    max="1000000" 
+                    min={MIN_INVESTMENT} 
+                    max={MAX_INVESTMENT} 
                     step="10000"
                     value={investment}
                     onChange={(e) => setInvestment(Number(e.target.value))}
-                    className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-green"
+                    className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-brand-green"
+                    style={{
+                        background: `linear-gradient(to right, #00ff94 0%, #00ff94 ${percentage}%, rgba(255, 255, 255, 0.1) ${percentage}%, rgba(255, 255, 255, 0.1) 100%)`
+                    }}
                 />
                 <div className="flex justify-between mt-2 text-xs font-mono text-gray-600">
                     <span>$10k</span>

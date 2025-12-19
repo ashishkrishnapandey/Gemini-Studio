@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
         <div>
           <h2 className="text-sm font-mono text-brand-green uppercase tracking-widest mb-4">What We Build</h2>
           <h3 className="text-4xl font-bold text-white mb-2">High-Integrity Projects</h3>
-          <p className="text-gray-400 max-w-2xl">Strictly vetted for additionality, permanence, and leakage. We only build what matters.</p>
+          <p className="text-gray-400 max-w-2xl">Strictly vetted for additionality, permanence and leakage. We only build what matters.</p>
         </div>
         <div className="flex gap-2">
           <button 
@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
                         {project.type.includes('Biochar') ? 'factory' : project.type.includes('Blue') ? 'water_drop' : 'park'}
                       </span>
                     </div>
-                    <p className="text-gray-400 text-sm mb-6">{project.type} project in {project.location}.</p>
+                    <p className="text-gray-400 text-sm mb-6">{project.description}</p>
                     <div className="grid grid-cols-2 gap-4 text-xs font-mono text-gray-500">
                       <div>
                         <div className="text-white text-lg">{project.permanence}</div>
@@ -89,12 +89,13 @@ const Projects: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-white text-lg">{project.removal_annual}</div>
-                        {project.type.includes('Blue') || project.type.includes('Bamboo') ? 'AREA RESTORED' : 'ANNUAL REMOVAL'}
+                        {project.type.includes('Blue') || project.type.includes('Bamboo') || project.type.includes('Reforestation') ? 'AREA RESTORED' : 'ANNUAL REMOVAL'}
                       </div>
                     </div>
                   </div>
                   <div className="pt-6 mt-6 border-t border-white/5 flex items-center gap-2 text-brand-green text-sm font-medium">
-                    View Data Asset <span className="material-symbols-outlined text-sm">arrow_outward</span>
+                    <span className="material-symbols-outlined text-sm">location_on</span>
+                    {project.location}
                   </div>
                 </>
               )}

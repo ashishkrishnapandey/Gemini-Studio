@@ -16,4 +16,5 @@ export interface Project {
     permanence: string;
     status: 'Active' | 'Feasibility';
     img: string;
+    description: string;
 }

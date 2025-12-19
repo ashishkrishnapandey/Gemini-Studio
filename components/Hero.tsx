@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            We originate, finance and steward a diversified portfolio of nature-based solutions and technology-enabled carbon removal.
+            We originate, finance and steward a diversified portfolio of nature-based solutions and technology-enabled carbon removal projects.
             <div className="text-white mt-4 font-medium">
               Building at the nexus of <span className="text-brand-green">Nature</span>, <span className="text-brand-green">Community</span> & <span className="text-brand-green">Capital</span>.
             </div>

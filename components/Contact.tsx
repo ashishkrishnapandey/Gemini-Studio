@@ -6,11 +6,11 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-sm font-mono text-brand-green uppercase tracking-widest mb-6">Partners</h2>
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 mb-20 text-gray-500 font-mono text-lg font-bold opacity-50 grayscale hover:grayscale-0 transition-all">
-            <span>CORPORATES</span>
-            <span>INSTITUTIONAL INVESTORS</span>
-            <span>GOVERNMENTS</span>
-            <span>CLIMATE FUNDS</span>
+            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 mb-20 font-mono text-lg font-bold">
+            <span className="text-gray-500 transition-colors duration-300 hover:text-brand-green cursor-default">CORPORATES</span>
+            <span className="text-gray-500 transition-colors duration-300 hover:text-brand-green cursor-default">INSTITUTIONAL INVESTORS</span>
+            <span className="text-gray-500 transition-colors duration-300 hover:text-brand-green cursor-default">GOVERNMENTS</span>
+            <span className="text-gray-500 transition-colors duration-300 hover:text-brand-green cursor-default">CLIMATE FUNDS</span>
             </div>
         </div>
         
@@ -40,15 +40,15 @@ const Contact: React.FC = () => {
             <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center gap-2 mb-6">
                     <span className="font-mono font-bold text-xl tracking-tighter text-brand-green">NFGF</span>
-                    <span className="font-mono font-bold text-xl tracking-tighter text-white">CARBON</span>
+                    <span className="font-mono font-bold text-xl tracking-tighter text-white">CARBON ASSETS</span>
                 </div>
                 <p className="text-gray-400 mb-6">Builders of Lasting Carbon Assets.</p>
                 <div className="flex gap-4 text-sm text-gray-500">
-                    <span>San Francisco</span>
+                    <span>Kohima</span>
                     <span>•</span>
-                    <span>Nairobi</span>
+                    <span>Noida</span>
                     <span>•</span>
-                    <span>São Paulo</span>
+                    <span>Panaji</span>
                 </div>
             </div>
             
@@ -57,8 +57,8 @@ const Contact: React.FC = () => {
                 <div className="flex flex-col gap-4 text-gray-400 text-sm">
                     <a href="#projects" className="hover:text-brand-green transition-colors">Projects</a>
                     <a href="#platform" className="hover:text-brand-green transition-colors">Process</a>
-                    <a href="#impact" className="hover:text-brand-green transition-colors">Calculator</a>
-                    <a href="#" className="hover:text-brand-green transition-colors">Team</a>
+                    <a href="#services" className="hover:text-brand-green transition-colors">Services</a>
+                    <a href="#impact" className="hover:text-brand-green transition-colors">Impact</a>
                 </div>
             </div>
             

@@ -39,9 +39,9 @@ const Process: React.FC = () => {
             <div className="h-full flex flex-col justify-between relative z-10 transition-all duration-300 animate-fade-in-up" key={activeStep.id}>
               <div className="mb-auto">
                 <div className="inline-flex items-center gap-2 px-3 py-1 border border-brand-green/30 bg-brand-green/10 rounded-full mb-6">
-                  <span className="text-brand-green font-mono text-xs uppercase tracking-widest">{activeStep.subtitle}</span>
+                  <span className="text-brand-green font-mono text-xs uppercase tracking-widest">{activeStep.title}</span>
                 </div>
-                <h3 className="text-4xl md:text-5xl font-bold mb-6 text-white">{activeStep.title}</h3>
+                <h3 className="text-4xl md:text-5xl font-bold mb-6 text-white">{activeStep.subtitle}</h3>
                 <p className="text-xl text-gray-300 leading-relaxed max-w-xl">{activeStep.desc}</p>
               </div>
               <div className="mt-8 pt-8 border-t border-white/10 flex items-center gap-4 text-sm font-mono text-gray-500">
