@@ -1,8 +1,21 @@
 import React from 'react';
 
 const Contact: React.FC = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 100;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section className="bg-black relative pt-32" id="contact">
+    <section className="bg-black relative pt-32 scroll-mt-28" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Partners / Ecosystem Section */}
@@ -138,19 +151,35 @@ const Contact: React.FC = () => {
             <div>
                 <h4 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-6">EXPLORE</h4>
                 <div className="flex flex-col gap-4 text-gray-400 text-sm">
-                    <a href="#projects" className="hover:text-brand-green transition-colors">Projects</a>
-                    <a href="#platform" className="hover:text-brand-green transition-colors">Process</a>
-                    <a href="#services" className="hover:text-brand-green transition-colors">Services</a>
-                    <a href="#impact" className="hover:text-brand-green transition-colors">Impact</a>
+                    <a 
+                        href="#projects" 
+                        className="hover:text-brand-green transition-colors cursor-pointer"
+                        onClick={(e) => scrollToSection(e, 'projects')}
+                    >Projects</a>
+                    <a 
+                        href="#platform" 
+                        className="hover:text-brand-green transition-colors cursor-pointer"
+                        onClick={(e) => scrollToSection(e, 'platform')}
+                    >Process</a>
+                    <a 
+                        href="#services" 
+                        className="hover:text-brand-green transition-colors cursor-pointer"
+                        onClick={(e) => scrollToSection(e, 'services')}
+                    >Services</a>
+                    <a 
+                        href="#impact" 
+                        className="hover:text-brand-green transition-colors cursor-pointer"
+                        onClick={(e) => scrollToSection(e, 'impact')}
+                    >Impact</a>
                 </div>
             </div>
             
             <div>
                 <h4 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-6">LEGAL</h4>
                 <div className="flex flex-col gap-4 text-gray-400 text-sm">
-                    <a href="#" className="hover:text-brand-green transition-colors">Privacy Policy</a>
-                    <a href="#" className="hover:text-brand-green transition-colors">Terms of Service</a>
-                    <a href="#" className="hover:text-brand-green transition-colors">Disclosures</a>
+                    <a href="#" onClick={e => e.preventDefault()} className="hover:text-brand-green transition-colors cursor-not-allowed opacity-50">Privacy Policy</a>
+                    <a href="#" onClick={e => e.preventDefault()} className="hover:text-brand-green transition-colors cursor-not-allowed opacity-50">Terms of Service</a>
+                    <a href="#" onClick={e => e.preventDefault()} className="hover:text-brand-green transition-colors cursor-not-allowed opacity-50">Disclosures</a>
                 </div>
             </div>
           </div>

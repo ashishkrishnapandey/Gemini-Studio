@@ -2,7 +2,7 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <section className="py-24 border-b border-white/5 bg-brand-black" id="services">
+    <section className="py-24 border-b border-white/5 bg-brand-black scroll-mt-28" id="services">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 text-center">
           <h2 className="text-sm font-mono text-brand-green uppercase tracking-widest mb-4">Services</h2>

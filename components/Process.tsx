@@ -6,7 +6,7 @@ const Process: React.FC = () => {
   const activeStep = STEPS[currentStep];
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden scroll-mt-20" id="platform">
+    <section className="py-24 bg-black relative overflow-hidden scroll-mt-28" id="platform">
       {/* Decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-gray/20 to-transparent pointer-events-none"></div>
       

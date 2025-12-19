@@ -34,7 +34,7 @@ const Impact: React.FC = () => {
   const percentage = ((investment - MIN_INVESTMENT) / (MAX_INVESTMENT - MIN_INVESTMENT)) * 100;
 
   return (
-    <section className="py-24 bg-black border-b border-white/5" id="impact">
+    <section className="py-24 bg-black border-b border-white/5 scroll-mt-28" id="impact">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           

@@ -1,6 +1,19 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 100;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -47,7 +60,11 @@ const Hero: React.FC = () => {
           
           {/* Actions & Social Proof - Decoupled for clarity */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a className="group relative px-8 py-4 bg-white text-brand-black font-bold font-mono uppercase tracking-wider overflow-hidden hover:bg-brand-green transition-colors" href="#projects">
+            <a 
+                className="group relative px-8 py-4 bg-white text-brand-black font-bold font-mono uppercase tracking-wider overflow-hidden hover:bg-brand-green transition-colors cursor-pointer" 
+                href="#projects"
+                onClick={(e) => scrollToSection(e, 'projects')}
+            >
               <span className="relative z-10 flex items-center gap-2">
                 See what we build
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -70,7 +87,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Scroll Indicator - Reverted to bouncing center */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce text-white">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce text-white pointer-events-none">
         <span className="text-[10px] font-mono uppercase tracking-[0.2em]">Scroll</span>
         <span className="material-symbols-outlined text-sm">keyboard_arrow_down</span>
       </div>

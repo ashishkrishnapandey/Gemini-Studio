@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-brand-dark border-b border-white/5" id="projects">
+    <section className="py-24 bg-brand-dark border-b border-white/5 scroll-mt-28" id="projects">
       <div className="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
         <div>
           <h2 className="text-sm font-mono text-brand-green uppercase tracking-widest mb-4">What We Build</h2>
